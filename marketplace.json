@@ -1,0 +1,15 @@
+{
+  "name": "phgors-zcode-plugins",
+  "plugins": [
+    {
+      "name": "phgors-zcode-plugin",
+      "source": "./",
+      "version": "0.1.0",
+      "description": "Unattended ticket-set drivers (unattended / unattended-workflow skills) plus a load-agents-local SessionStart hook that injects the project's git-ignored AGENTS.local.md",
+      "displayName": "phgors ZCode Plugin",
+      "displayName_i18n": { "zh-CN": "phgors 的 ZCode 插件" },
+      "description_i18n": { "zh-CN": "无人值守工单驱动技能（后台代理版 / 工作流引擎版），附带在会话启动时自动注入项目 AGENTS.local.md 的钩子" },
+      "category": "developer-tools"
+    }
+  ]
+}

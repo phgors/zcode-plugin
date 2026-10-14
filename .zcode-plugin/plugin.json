@@ -1,0 +1,8 @@
+{
+  "name": "phgors-zcode-plugin",
+  "version": "0.1.0",
+  "description": "Unattended ticket-set drivers (unattended / unattended-workflow skills) plus a load-agents-local SessionStart hook that injects the project's git-ignored AGENTS.local.md",
+  "author": { "name": "phgors" },
+  "skills": "./skills",
+  "hooks": "./hooks/hooks.json"
+}
