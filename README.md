@@ -22,11 +22,12 @@
 
 ## 钩子行为
 
-`hooks/load-agents-local.sh` 在会话启动/恢复时运行：
+`hooks/load-agents-local.js`（Node.js 实现，无第三方依赖）在会话启动/恢复时运行：
 
-- 项目根定位：`CLAUDE_PROJECT_ROOT` 环境变量 → hook 输入 JSON 的 `cwd` 字段（含 Windows 路径反斜杠转义还原）→ 当前目录；
-- 项目根存在 `AGENTS.local.md` 时把内容注入上下文；不存在时静默退出；
-- 通过 `${CLAUDE_PLUGIN_ROOT}` 引用插件安装路径，不含任何写死的本机路径。
+- 项目根定位：`CLAUDE_PROJECT_ROOT` 环境变量 → hook 输入 JSON 的 `cwd` 字段 → 当前目录；
+- 项目根存在 `AGENTS.local.md` 时把内容注入上下文；不存在或任何出错时静默退出，不阻塞会话启动；
+- 通过 `${CLAUDE_PLUGIN_ROOT}` 引用插件安装路径，不含任何写死的本机路径；
+- 前提：PATH 中有 `node`（Windows / macOS / Linux 均可，不依赖 Git Bash）。
 
 ## 更新
 
